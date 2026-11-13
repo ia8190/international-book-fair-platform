@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  --cream: #f9f7f1;
+  --paper: #fffdf8;
+  --forest: #203e32;
+  --ink: #253d33;
+  --rust: #ad5139;
+  --peach: #e5b79c;
+  --muted: #73766b;
+  --line: #dedfd4;
+  --sage: #e8ebdf;
+  --serif: 'Playfair Display', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { margin: 0; padding: 0; scroll-behavior: smooth; scroll-padding-top: 120px; }
+body { margin: 0; min-width: 320px; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+h1,h2,h3,h4,p { margin: 0; }
+h1,h2,h3,h4 { font-family: var(--serif); font-weight: 400; line-height: 1.2; }
+a { color: inherit; text-decoration: none; transition: color .2s; }
+a:hover { color: var(--rust); }
+button,input,select,textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+button { border: 0; border-radius: 0; }
+svg { flex-shrink: 0; vertical-align: middle; }
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible { outline: 2px solid var(--rust); outline-offset: 5px; }
+::selection { background: #d7debf; color: var(--forest); }
+.main-content { flex: 1; border: 0; padding: 0; }
+.section-wrap { width: min(1240px, calc(100% - 80px)); margin-inline: auto; }
+.eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; color: var(--rust); }
+.button,.main-content .button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 51px; padding: 15px 23px; color: var(--cream); background: var(--forest); border: 1px solid var(--forest); border-radius: 3px; font: 500 12px/1.4 var(--sans); text-align: center; transition: background .22s,transform .22s,box-shadow .22s; }
+.button:hover,.main-content .button:hover { background: #335443; color: white; border-color: #335443; transform: translateY(-2px); box-shadow: 0 5px 16px #203e3212; }
+.button-small { min-height: 42px; padding: 11px 17px; gap: 21px; }
+.button.button-outline { color: var(--forest); background: transparent; border-color: #8d9b89; }
+.button.button-outline:hover { background: var(--forest); color: var(--cream); }
+.text-link { display: inline-flex; align-items: center; gap: 15px; font-size: 12px; font-weight: 500; }
+.text-link:hover { color: var(--rust); }
+.icon-button { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); background: transparent; border-radius: 50%; color: var(--forest); padding: 8px; }
+.icon-button:hover { background: var(--sage); color: var(--forest); border-color: var(--line); }
+/* One shared cover treatment keeps the hero, bookshelf and details consistent. */
+.cover-art { position: relative; width: 100%; aspect-ratio: .67; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 25px 18px 20px 25px; text-align: center; color: #eee2bb; background: #355245; box-shadow: 4px 7px 8px #1e2c2325, 15px 18px 26px #28342718; border-radius: 1px 3px 3px 1px; border-right: 4px solid #f3ecd9; }
+.cover-art::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(17deg,transparent,transparent 2px,#fff2 3px,transparent 4px); opacity: .1; pointer-events: none; }
+.cover-spine { position: absolute; top: 0; bottom: 0; left: 6px; width: 5px; background: linear-gradient(90deg,#0002,#fff1,transparent); border-right: 1px solid #0001; }
+.cover-edition { font: 500 6px var(--sans); letter-spacing: .2em; margin-bottom: 15px; }
+.cover-name { font-family: var(--serif); font-size: clamp(17px, 1.8vw, 24px); line-height: 1.16; text-wrap: balance; }
+.cover-illustration { width: 100%; flex: 1; min-height: 0; margin: 12px 0; }
+.cover-author { font-size: 7px; text-transform: uppercase; letter-spacing: .12em; }
+.cover-red { background: #a9442c; color: #f4dbab; }
+.cover-gold { background: #d9b15e; color: #35473d; }
+.cover-blue { background: #3c565d; color: #e1dfc6; }
+.fair-modal { position: fixed; margin: auto; padding: 32px; width: min(760px,calc(100% - 32px)); max-height: min(85vh,900px); border: 1px solid var(--line); border-radius: 8px; background: var(--cream); color: var(--ink); box-shadow: 0 25px 100px #102b3340; overflow-y: auto; }
+.fair-modal::backdrop { background: #10291fc2; backdrop-filter: blur(6px); }
+.modal-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.modal-heading h2 { font-size: 31px; }
+.modal-lead { margin: 22px 0; color: var(--muted); font-size: 13px; }
+.book-detail-layout { display: grid; grid-template-columns: 200px 1fr; gap: 36px; padding-top: 30px; align-items: center; }
+.book-detail-layout h3 { font-size: 31px; margin: 12px 0; }
+.book-detail-layout p:not(.eyebrow) { color: var(--muted); margin: 15px 0; }
+.book-detail-layout .detail-author { font-size: 12px; }
+.book-detail-layout .button { margin-top: 15px; font-size: 11px; gap: 12px; }
+/* Bring existing management and booking screens into the same visual system. */
+.main-content :is(.visitor-dashboard,.exhibitor-dashboard,.admin-dashboard) { background: var(--cream); padding: 70px 40px; }
+.main-content .dashboard-title { color: var(--forest); font-family: var(--serif); font-weight: 400; font-size: clamp(32px,4vw,48px); }
+.main-content .option-card { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; box-shadow: none; padding: 35px; }
+.main-content .option-card:hover { background: var(--sage); box-shadow: 0 10px 30px #203e3208; }
+.main-content .option-card h2 { color: var(--forest); font-family: var(--serif); font-size: 26px; font-weight: 400; }
+.main-content :is(.action-button,.login-button,.register-button,.confirm-booking-button) { background: var(--forest); color: var(--cream); padding: 14px 23px; border-radius: 3px; font-size: 13px; font-weight: 500; }
+.main-content :is(.action-button,.login-button,.register-button,.confirm-booking-button):hover { background: #335443; color: white; }
+.main-content :is(input,select,textarea) { background: var(--paper); border: 1px solid #d6dace; border-radius: 3px; padding: 12px 14px; color: var(--forest); font: 14px/1.5 var(--sans); width: 100%; min-width: 0; }
+.main-content :is(input,select,textarea):focus { border-color: var(--forest); box-shadow: 0 0 0 3px #203e3209; outline: none; background: white; }
+.main-content label { font: 500 12px/1.5 var(--sans); color: var(--forest); }
+.main-content .form-group { display: flex; flex-direction: column; gap: 8px; }
+.main-content :is(.ticket-booking-container,.register-exhibitor-container,.book-stall-container,.exhibitor-stall-booking-container) { margin: 55px auto; background: var(--paper); border: 1px solid var(--line); box-shadow: none; border-radius: 6px; width: min(660px,calc(100% - 40px)); }
+.main-content :is(.book-list-container,.exhibitor-list-container,.manage-books-container,.exhibitor-management-container,.manage-stalls-container,.rules-container) { width: min(1160px,calc(100% - 40px)); margin: 45px auto; background: var(--cream); color: var(--forest); }
+.main-content :is(.book-list-container,.exhibitor-list-container,.rules-container) h1 { color: var(--forest); }
+.main-content table { border-collapse: collapse; font-size: 13px; }
+.main-content :is(th,td) { border-color: var(--line); }
+.main-content th { background: var(--forest); color: var(--cream); }
+.main-content .form-section { box-shadow: none; background: var(--cream); }
+@media(max-width:900px) { .section-wrap { width: calc(100% - 48px); } }
+@media(max-width:600px) { .section-wrap { width: calc(100% - 40px); } .book-detail-layout { grid-template-columns: 1fr; gap: 25px; } .book-detail-layout>.cover-art { width: 155px; margin: auto; } .fair-modal { padding: 22px; } .modal-heading h2 { font-size: 27px; } .main-content :is(.visitor-dashboard,.exhibitor-dashboard,.admin-dashboard) { padding: 45px 20px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation-duration: .01ms!important; transition-duration: .01ms!important; animation-iteration-count: 1!important; } }
+
+.main-content :is(.exhibitor-management-container,.manage-stalls-container,.manage-books-container,.rules-container,.exhibitor-stall-booking-container,.register-exhibitor-container) { font-family: var(--sans); box-shadow: none; border: 1px solid var(--line); border-radius: 5px; padding: 32px; }
+.main-content :is(.exhibitor-management-container,.manage-stalls-container,.manage-books-container,.rules-container) h1 { font-family: var(--serif); color: var(--forest); font-weight: 400; }
+.main-content :is(.add-stall-form,.add-book-form,.edit-book-form) { background: var(--sage); box-shadow: none; border-radius: 4px; }
+.main-content input[type="checkbox"],.main-content input[type="radio"] { width: auto; accent-color: var(--forest); }
+@media(max-width:600px) { .main-content :is(.exhibitor-management-container,.manage-stalls-container,.manage-books-container,.rules-container,.exhibitor-stall-booking-container,.register-exhibitor-container) { padding: 22px; } }

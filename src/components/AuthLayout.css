@@ -1,0 +1,158 @@
+.auth-layout {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:650px;
+  margin-block:55px;
+  border:1px solid var(--line);
+  border-radius:5px;
+  overflow:hidden}
+.auth-story {
+  position:relative;
+  overflow:hidden;
+  background:var(--sage);
+  padding:55px 50px;
+  min-height:650px}
+.auth-story h1 {
+  font-size:51px;
+  letter-spacing:-.04em;
+  line-height:1.15;
+  margin-top:22px}
+.auth-story h1 em {
+  color:var(--rust);
+  font-weight:400}
+.auth-story>p:not(.eyebrow) {
+  color:var(--muted);
+  font-size:12px;
+  max-width:270px;
+  line-height:1.9;
+  margin-top:23px}
+.auth-book {
+  width:145px;
+  position:absolute;
+  bottom:-25px;
+  right:65px;
+  transform:rotate(17deg)}
+.auth-book .cover-name {
+  font-size:20px}
+.auth-star {
+  position:absolute;
+  font-size:80px;
+  bottom:65px;
+  left:48px;
+  color:#9cae88}
+.auth-caption {
+  position:absolute;
+  bottom:28px;
+  left:50px;
+  font-size:8px;
+  letter-spacing:.08em;
+  color:var(--forest)}
+.auth-panel {
+  padding:55px clamp(25px,4vw,65px);
+  background:var(--paper);
+  align-content:center}
+.auth-panel .auth-heading {
+  font-size:40px;
+  letter-spacing:-.035em;
+  color:var(--forest);
+  margin:10px 0}
+.auth-panel .auth-description {
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:30px}
+.auth-form {
+  display:flex;
+  flex-direction:column;
+  gap:19px}
+.auth-form .button {
+  width:100%;
+  margin-top:5px}
+.auth-bottom {
+  font-size:11px;
+  color:var(--muted);
+  text-align:center;
+  margin-top:25px}
+.auth-bottom a {
+  color:var(--forest);
+  text-decoration:underline;
+  text-underline-offset:4px}
+.auth-message {
+  font-size:12px;
+  line-height:1.8;
+  border-left:2px solid var(--rust);
+  padding:10px 13px;
+  background:#f3ebe3;
+  margin:20px 0;
+  color:var(--rust)}
+.auth-message.success {
+  border-color:var(--forest);
+  color:var(--forest);
+  background:var(--sage)}
+.auth-name-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px}
+.password-label {
+  display:flex;
+  align-items:center;
+  justify-content:space-between}
+.password-toggle {
+  background:transparent;
+  color:var(--muted);
+  font-size:10px;
+  padding:0;
+  border:0}
+.password-toggle:hover {
+  background:transparent;
+  color:var(--rust)}
+@media(max-width:800px) {
+  .auth-story {
+  padding:40px 30px}
+.auth-story h1 {
+  font-size:40px}
+.auth-book {
+  right:35px;
+  width:120px}
+.auth-panel {
+  padding:40px 25px}
+.auth-star,.auth-caption {
+  left:30px}
+}
+@media(max-width:600px) {
+  .auth-layout {
+  grid-template-columns:1fr;
+  margin-block:25px}
+.auth-story {
+  min-height:260px;
+  padding:30px;
+  order:2}
+.auth-story h1 {
+  font-size:29px;
+  margin-top:13px;
+  max-width:210px}
+.auth-story h1 br:nth-child(2) {
+  display:initial}
+.auth-story>p:not(.eyebrow) {
+  max-width:200px;
+  font-size:10px;
+  margin-top:14px}
+.auth-book {
+  width:105px;
+  bottom:24px;
+  right:20px}
+.auth-book .cover-name {
+  font-size:15px}
+.auth-star {
+  display:none}
+.auth-story>.eyebrow {
+  font-size:7px}
+.auth-caption {
+  bottom:15px;
+  font-size:7px}
+.auth-panel {
+  padding:35px 25px}
+.auth-panel .auth-heading {
+  font-size:35px}
+.auth-name-row {
+  gap:12px}
+}

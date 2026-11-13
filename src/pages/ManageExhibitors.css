@@ -1,0 +1,120 @@
+.exhibitor-management-container { 
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--cream);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.exhibitor-management-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--forest);
+  margin-bottom: 2rem;
+}
+
+.section-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--forest);
+  text-align: center;
+}
+
+.exhibitor-management-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* li {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.exhibitor-management-container li strong {
+  font-size: 1.1rem;
+  color: var(--forest);
+  margin-right: auto;
+}
+
+.exhibitor-management-container li span {
+  font-size: 1rem;
+  color: #555;
+  margin-right: auto;
+}
+.exhibitor-management-container button {
+  padding: 0.3rem 0.6rem; 
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.exhibitor-management-container button:active {
+  transform: scale(0.95);
+}
+
+.approve-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.approve-button:hover {
+  background-color: #218838;
+}
+
+.decline-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.decline-button:hover {
+  background-color: #c82333;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.exhibitor-management-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; 
+}
+
+
+.no-items-message {
+  text-align: center;
+  color: #777;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
